@@ -34,7 +34,7 @@ print("\n[FASE 2] DATA UNDERSTANDING - Comprensión de Datos")
 print("-" * 80)
 
 # Cargar datos
-df = pd.read_csv('/home/ubuntu/survey_data.csv')
+df = pd.read_csv('survey_data.csv')
 print(f"✓ Datos cargados: {df.shape[0]} encuestas, {df.shape[1]} variables")
 
 # Mapeo de columnas cuantitativas
@@ -240,7 +240,7 @@ fig_scatter.update_layout(
     hovermode='closest',
     template='plotly_white'
 )
-fig_scatter.write_html('/home/ubuntu/03_scatterplot_2d.html')
+fig_scatter.write_html('03_scatterplot_2d.html')
 print("✓ Guardado: 03_scatterplot_2d.html")
 
 # 4. GRÁFICA DE BARRAS - MEDIAS POR CLÚSTER
@@ -267,7 +267,7 @@ fig_bars.update_layout(
     height=500,
     template='plotly_white'
 )
-fig_bars.write_html('/home/ubuntu/04_bar_chart_means.html')
+fig_bars.write_html('04_bar_chart_means.html')
 print("✓ Guardado: 04_bar_chart_means.html")
 
 # 5. TABLA RESUMEN
@@ -290,11 +290,11 @@ for k in range(optimal_k):
     })
 
 summary_df = pd.DataFrame(summary_data)
-summary_df.to_csv('/home/ubuntu/05_cluster_summary.csv', index=False)
+summary_df.to_csv('05_cluster_summary.csv', index=False)
 print("✓ Guardado: 05_cluster_summary.csv")
 
 # Guardar datos con asignación de clústeres
-df_quant.to_csv('/home/ubuntu/06_data_with_clusters.csv', index=False)
+df_quant.to_csv('06_data_with_clusters.csv', index=False)
 print("✓ Guardado: 06_data_with_clusters.csv")
 
 # ============================================================================

@@ -32,7 +32,7 @@ print("\n[FASE 2] DATA UNDERSTANDING - Comprensión de Datos")
 print("-" * 80)
 
 # Cargar datos
-df = pd.read_csv('/home/ubuntu/survey_data.csv')
+df = pd.read_csv('survey_data.csv')
 print(f"✓ Datos cargados: {df.shape[0]} encuestas, {df.shape[1]} variables")
 
 # Mapeo de columnas cuantitativas
@@ -200,7 +200,7 @@ fig_elbow.update_layout(
     template='plotly_white',
     height=500
 )
-fig_elbow.write_html('/home/ubuntu/01_elbow_plot.html')
+fig_elbow.write_html('01_elbow_plot.html')
 print("✓ Guardado: 01_elbow_plot.html")
 
 # 2. HEATMAP Z-SCORE
@@ -230,7 +230,7 @@ fig_heatmap.update_layout(
     yaxis_title="Clústeres",
     height=400
 )
-fig_heatmap.write_html('/home/ubuntu/02_heatmap_zscore.html')
+fig_heatmap.write_html('02_heatmap_zscore.html')
 print("✓ Guardado: 02_heatmap_zscore.html")
 
 # 3. SCATTERPLOT 2D CON CENTROIDES
