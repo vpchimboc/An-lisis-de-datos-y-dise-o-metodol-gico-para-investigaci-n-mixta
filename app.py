@@ -429,6 +429,7 @@ st.download_button(
 )
 
 # Guardar datos con asignación de clústeres
+#2hhgjh
 df_with_clusters = df_quant.copy()
 st.download_button(
     label="📥 Descargar Datos Completos con Clústeres (CSV)",
